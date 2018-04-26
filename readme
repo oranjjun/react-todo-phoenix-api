@@ -1,0 +1,9 @@
+API creation steps
+
+1) mix phx.new --no-brunch --no-html {api_name}
+2) mix ecto.create
+3) mix phx.gen.json Palo Todo todos text:string
+4) resources "/{ROUTENAME}", {CONTROLLERNAME}, only: [:index, :show]
+5) mix ecto.migrate
+6) configure cors plug config https://github.com/mschae/cors_plug
+7) config websockets(channels)
